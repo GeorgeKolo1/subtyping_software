@@ -1,4 +1,4 @@
-from discrimination_index import DiscriminationIndex
+from src.statistical_tests.discrimination_index import DiscriminationIndex
 
 def test_CT():
     ct, wallace = CT(dataframe=None, arr1=[1, 2, 1, 2], arr2=[1, 1, 2, 2])
