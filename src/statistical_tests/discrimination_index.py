@@ -29,7 +29,7 @@ def DiscriminationIndex(sm):
         summation_pi_j3.append(pi_j3)
         summation_pi_j2.append(pi_j2)
 
-    S2 = (4 * (sum(summation_pi_j3 - ((summation_pi_j2 ** 2)**2))))
+    S2 = (4 * (sum(summation_pi_j3)) - ((sum(summation_pi_j2) ** 2)**2))))
     CI_low = D - (2 * math.sqrt(S2))    
     CI_high = D + (2 * math.sqrt(S2)) 
 
