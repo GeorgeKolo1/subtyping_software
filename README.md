@@ -3,6 +3,9 @@ Repo for prototype of subtyping app
 
 TO-DO
 [X] Create adjusted wallace coefficient script
-[] Create tests for discrimination index, wallace coefficient and adjusted wallace coefficient scripts
+[X] Create tests for discrimination index
+[] Fix discrimination index 95% confidence interval calculation
+[] Create test for wallace coefficient
+[] Create test for adjusted wallace coefficient
 [] Create visualisation
 [] Create function to compare associations of subtypes with a phenotype
