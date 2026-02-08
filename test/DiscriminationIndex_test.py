@@ -9,3 +9,5 @@ def test_DiscriminationIndex():
     assert D >= CI_low
     assert D <= CI_high
     assert D == 0.721
+    assert CI_low == 0.676
+    assert CI_high == 0.767
