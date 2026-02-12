@@ -1,5 +1,5 @@
-# Subtyping_app
-Repo for prototype of subtyping app
+# Subtyping software
+Repo for software to compare subtyping methods - in production
 
 TO-DO
 [X] Create adjusted wallace coefficient script
