@@ -2,7 +2,7 @@ from src.statistical_tests.discrimination_index import DiscriminationIndex
 import pandas as pd
 
 def test_DiscriminationIndex():
-    data = pd.read_csv('test/test_data.csv')
+    data = pd.read_csv('test/test_data_folder/test_data.csv')
     sm = data['T type']
     D, CI_low, CI_high = DiscriminationIndex(sm)
 
