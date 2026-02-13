@@ -3,6 +3,7 @@ Repo for software to compare subtyping methods - in production
 
 TO-DO
 [X] Create test for wallace coefficient
+[] Debug the wallace coefficient tests
 [] Create test for adjusted wallace coefficient
 [] Create visualisation
 [] Create function to compare associations of subtypes with a phenotype
