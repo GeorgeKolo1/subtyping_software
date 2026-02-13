@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 from src.statistical_tests import wallace_coefficient as wc
 
-def Wallace_test():
+def test_wallace():
     """Function to test the wallace coefficient function
     
     This function takes test data and runs the wallace coefficient function on it, then checks if 
@@ -13,7 +13,7 @@ def Wallace_test():
     Returns:
         A pytest assert statement that checks if the output of the wallace coefficient function is as expected
 """
-    data = pd.read_csv('test/test_data.csv')
+    data = pd.read_csv('test/test_data_folder/test_data.csv')
     data = data.to_numpy()
     wc_ab, wc_ba = wc.WallaceCoefficient(data[0], data[1])
 
