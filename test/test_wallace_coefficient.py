@@ -15,7 +15,9 @@ def test_wallace():
 """
     data = pd.read_csv('test/test_data_folder/test_data.csv')
     data = data.to_numpy()
-    wc_ab, wc_ba = wc.WallaceCoefficient(data[0], data[1])
+    assert data.shape[1] == 1
+
+    wc_ab, wc_ba = wc.Wallace(data[1], data[2])
 
     assert wc_ab != wc_ba
     assert wc_ab > 0 and wc_ab <= 1

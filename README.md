@@ -7,3 +7,5 @@ TO-DO
 [] Create visualisation
 [] Create function to compare associations of subtypes with a phenotype
 [] Make proper docstrings for all functions and tests
+[] Add proper error handling 
+[] Create proper input file checks

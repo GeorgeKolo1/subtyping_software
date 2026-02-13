@@ -11,26 +11,18 @@ def CT(arr1, arr2, dataframe=None):
         if not isinstance(arr2, pd.Series):
             arr2 = pd.Series(arr2)
         
-
-
-    ''' Compute the contingency table for the wallace coefficient in the a->b direction where a is the first array/series provided'''
-    r1, c1 = arr1.shape
-    r2 ,c2 = arr2.shape
-
-    if r1 != r2:
-        raise ValueError("Arrays must have the same number of rows/observations/isolates")
     
     ct_ab = pd.crosstab(arr1, arr2)
     ct_ab = ct_ab.to_numpy()
     ct_ba = pd.crosstab(arr2, arr1)
-    ct_ba = ct_ba.to_numpy
+    ct_ba = ct_ba.to_numpy()
 
     return ct_ab, ct_ba
 
 def Wallace(arr1, arr2, dataframe=None):
     ''' Compute the wallace coefficient for two arrays (subtyping methods) in both directions'''
 
-    ct_ab, ct_ba = CT(arr1, arr2, dataframe)
+    ct_ab, ct_ba = CT(arr1, arr2)
 
     sum_ct_ab = np.sum((ct_ab * (ct_ab - 1)))
     row_sum_ab = np.sum(ct_ab, axis=1)
