@@ -27,7 +27,11 @@ def CT(arr1, arr2, dataframe=None):
 
     return ct_ab, ct_ba
 
-def Wallace(ct_ab, ct_ba):
+def Wallace(arr1, arr2, dataframe=None):
+    ''' Compute the wallace coefficient for two arrays (subtyping methods) in both directions'''
+
+    ct_ab, ct_ba = CT(arr1, arr2, dataframe)
+
     sum_ct_ab = np.sum((ct_ab * (ct_ab - 1)))
     row_sum_ab = np.sum(ct_ab, axis=1)
     denominator_ab = np.sum(row_sum_ab * row_sum_ab - 1)

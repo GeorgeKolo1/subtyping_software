@@ -6,3 +6,4 @@ TO-DO
 [] Create test for adjusted wallace coefficient
 [] Create visualisation
 [] Create function to compare associations of subtypes with a phenotype
+[] Make proper docstrings for all functions and tests
