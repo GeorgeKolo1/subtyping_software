@@ -15,12 +15,14 @@ def test_wallace():
 """
     data = pd.read_csv('test/test_data_folder/test_data.csv')
     data = data.to_numpy()
-    assert data.shape[1] == 1
 
-    wc_ab, wc_ba = wc.Wallace(data[1], data[2])
+    assert len(data[:, 0]) == 325
+    assert len(data[:, 1]) == 325
+
+
+    wc_ab, wc_ba = wc.Wallace(data[:, 0], data[:, 1])
 
     assert wc_ab != wc_ba
     assert wc_ab > 0 and wc_ab <= 1
     assert wc_ba > 0 and wc_ba <= 1
-
-
+    

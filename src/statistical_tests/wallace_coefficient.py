@@ -3,14 +3,7 @@ import math
 import pandas as pd
 
 # Compute the contingency table for two arrays (subtyping methods)
-def CT(arr1, arr2, dataframe=None):
-    
-    if dataframe == None:
-        if not isinstance(arr1, pd.Series):
-            arr1 = pd.Series(arr1) 
-        if not isinstance(arr2, pd.Series):
-            arr2 = pd.Series(arr2)
-        
+def CT(arr1, arr2):
     
     ct_ab = pd.crosstab(arr1, arr2)
     ct_ab = ct_ab.to_numpy()
@@ -19,7 +12,7 @@ def CT(arr1, arr2, dataframe=None):
 
     return ct_ab, ct_ba
 
-def Wallace(arr1, arr2, dataframe=None):
+def Wallace(arr1, arr2):
     ''' Compute the wallace coefficient for two arrays (subtyping methods) in both directions'''
 
     ct_ab, ct_ba = CT(arr1, arr2)

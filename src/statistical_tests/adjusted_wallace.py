@@ -1,6 +1,7 @@
-from discrimination_index import DiscriminationIndex
+from src.statistical_tests.discrimination_index import DiscriminationIndex
+from src.statistical_tests.wallace_coefficient import Wallace
 
-def AdjustedWallace(arr1, arr2, wallace_ab, wallace_ba):
+def AdjustedWallace(arr1, arr2):
     '''Calculates the adjusted wallace coefficient which is: 
         Adjusted Wallace = W(a->b) - Wi(a->b) / (1 - Wi(a->b) )
         
@@ -14,6 +15,8 @@ def AdjustedWallace(arr1, arr2, wallace_ab, wallace_ba):
     
     Da, Da_low, Da_high = DiscriminationIndex(arr1)
     Db, Db_low, Db_high = DiscriminationIndex(arr2)
+
+    wallace_ab, wallace_ba = Wallace(arr1, arr2)
 
     Wi_ab = 1 - Db
     Wi_ba = 1 - Da
