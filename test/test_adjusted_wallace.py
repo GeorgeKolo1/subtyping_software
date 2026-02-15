@@ -29,4 +29,5 @@ def test_adjusted_wallace():
     assert AW_ab > 0 and AW_ab < 1
     assert AW_ba > 0 and AW_ba < 1
     assert round(AW_ba, 3) == 0.807
+    assert round(AW_ab, 3) == 0.608
 
