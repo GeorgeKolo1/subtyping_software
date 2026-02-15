@@ -25,4 +25,4 @@ def test_wallace():
     assert wc_ab != wc_ba
     assert wc_ab > 0 and wc_ab <= 1
     assert wc_ba > 0 and wc_ba <= 1
-    
+    assert round(wc_ab, 3) == 0.696

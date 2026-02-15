@@ -19,11 +19,11 @@ def Wallace(arr1, arr2):
 
     sum_ct_ab = np.sum((ct_ab * (ct_ab - 1)))
     row_sum_ab = np.sum(ct_ab, axis=1)
-    denominator_ab = np.sum(row_sum_ab * row_sum_ab - 1)
+    denominator_ab = np.sum(row_sum_ab * (row_sum_ab - 1))
 
     sum_ct_ba = np.sum((ct_ba * (ct_ba - 1)))
     row_sum_ba = np.sum(ct_ba, axis=1)
-    denominator_ba = np.sum(row_sum_ba * row_sum_ba - 1)
+    denominator_ba = np.sum(row_sum_ba * (row_sum_ba - 1))
 
     wallace_ab = sum_ct_ab / denominator_ab
     wallace_ba = sum_ct_ba / denominator_ba
