@@ -12,6 +12,6 @@ def test_association_test():
     
     '''
     data = pd.read_csv('test/test_data_folder/test_data.csv')
-    data = data.to_numpy
+    data = data.to_numpy()
     arr1 = data[:, 1]
     
